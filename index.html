@@ -1,1 +1,298 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Wölkhart</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script src="js/scroll-animation.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.151.3/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.151.3/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Work</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <canvas id="animation"></canvas>
+            <div class="hero-content">
+                <h1>Thomas Wölkhart</h1>
+                <p>Grad Student / Data Scientist / ML Engineer</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <div class="about-grid">
+                        <div class="about-card">
+                            <h3>Who I Am</h3>
+                            <p>A grad student (Sport and Exercise Science) passionate about turning complex data into actionable insights. When I'm not building models or analyzing data, you'll find me reading research papers or hiking in the mountains.</p>
+                        </div>
+                        <div class="about-card">
+                            <h3>What I Do</h3>
+                            <div class="skills-container">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">scikit-learn</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">AWS</span>
+                                <span class="skill-tag">Azure</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">Computer Vision</span>
+                                <span class="skill-tag">NLP</span>
+                                <span class="skill-tag">Deep Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="3">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="4">0</span>
+                            <span class="stat-label">Live Projects in the Industry</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="10">0</span>
+                            <span class="stat-label">Team Members Led</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <canvas id="about-animation"></canvas>
+                </div>
+            </div>
+        </section> 
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="experience-container">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Data Scientist esports</h3>
+                        <span class="company">SAP</span>
+                        <span class="date">September 2024 - Present</span>
+                    </div>
+                    <div class="experience-body">
+                        <ul>
+                            <li>Internship for 4 months, then continuing as a working student</li>
+                            <li>Led development of team fight detection model resulting in 1500 hours of manual work saved yearly</li>
+                            <li>Implemented models in existing architecture on HANA Cloud</li>
+                            <li>Data Analysis for Team Liquid (League of Legends)</li>
+                        </ul>
+                        <div class="skills-container">
+                            <span class="skill-tag">SAP HANA</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>AI Engineer</h3>
+                        <span class="company">Mercedes-Benz</span>
+                        <span class="date">April 2024 - July 2024 (Working Student)</span>
+                    </div>
+                    <div class="experience-body">
+                        <ul>
+                            <li>Developed PoCs for 2 AI applications</li>
+                            <li>Scenario simulation and statistical analysis of sales data (Time-Series-Analysis)</li>
+                            <li>RAG-powered Chatbot to simulate Product Research</li>
+                        </ul>
+                        <div class="skills-container">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">scipy</span>
+                            <span class="skill-tag">NLP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>AI / Research Engineer</h3>
+                        <span class="company">TUM School of Management</span>
+                        <span class="date">January 2024 - May 2024 (Working Student)</span>
+                    </div>
+                    <div class="experience-body">
+                        <ul>
+                            <li>Continuation of winning project at Microsoft LLM Hackathon 2023</li>
+                            <li>Developed backend for first version of <a href="https://www.mgt.tum.de/our-stories-with-impact/stories/academic-flagship-project-for-ai-in-bavaria-goes-live">pAIge Chatbot</a></li>
+                            <li>Reduced consulting workload and freed up capacity in student support team</li>
+                            <li>Worked on RAG-System, databases, and feedback implementation</li>
+                        </ul>
+                        <div class="skills-container">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">NLP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>GenAI Engineer</h3>
+                        <span class="company">appliedAI</span>
+                        <span class="date">May 2023 - April 2024 (Working Student)</span>
+                    </div>
+                    <div class="experience-body">
+                        <ul>
+                            <li>Engineered and deployed tools to demonstrate the latest advancements in Generative AI</li>
+                            <li>In-depth research on AI topics, especially LLMs, to stay ahead of the curve and
+                                strategically prepare presentations, keynotes, etc</li>
+                            <li>Built a BI-Dashboard to provide actionable insights to decision-makers</li>
+                        </ul>
+                        <div class="skills-container">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JS / Node</span>
+                            <span class="skill-tag">NLP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Business Developer</h3>
+                        <span class="company">LOEWI (acq. by bioniq)</span>
+                        <span class="date">March 2022 - August 2022 (Internship)</span>
+                    </div>
+                    <div class="experience-body">
+                        <ul>
+                            <li>Created an automated solution for B2B lead generation</li>
+                            <li>Literature research and creation of database on bioavailability of different micronutrient chemical compounds</li>
+                            <li>B2B and B2C Growth</li>
+                        </ul>
+                        <div class="skills-container">
+                            <span class="skill-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-container">
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>M.Sc. Sport and Exercise Science</h3>
+                        <span class="university">Technical University of Munich</span>
+                        <span class="date">2023 - Present</span>
+                    </div>
+                    <div class="education-body">
+                        <p>Focus on Sport Informatics and Physiology</p>
+                        <p>Current GPA: 1.1</p>
+                    </div>
+                </div>
+        
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>B.Sc. Sports Science</h3>
+                        <span class="university">Technical University of Munich</span>
+                        <span class="date">2020 - 2023</span>
+                    </div>
+                    <div class="education-body">
+                        <p>Thesis on Physiology of world-class cyclists</p>
+                        <p>GPA: 1.3</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="experience-container">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>TUM Data Innovation Lab</h3>
+                        <span class="date">October 2024 - February 2025</span>
+                    </div>
+                    <div class="experience-body">
+                        <ul>
+                            <li>Project with Data Reply</li>
+                            <li>Validated different multi-agent frameworks (LangGraph, Autogen, MetaGPT)</li>
+                            <li>Implemented multi-agent system with LangGraph running on AWS</li>
+                            <li>Tried to automatize the full software-development-lifecycle</li>
+                        </ul>
+                        <div class="skills-container">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">JS/React</span>
+                            <span class="skill-tag">LangGraph</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Alexandria ML-Agents Hackathon</h3>
+                        <span class="date">May 2024</span>
+                    </div>
+                    <div class="experience-body">
+                        <ul>
+                            <li>Won 1st place</li>
+                            <li>Solution to share memory across LLM apps seamlessly</li>
+                            <li>Worked on backend, frontend, and database</li>
+                        </ul>
+                        <div class="skills-container">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Weaviate</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Microsoft LLM Hackathon</h3>
+                        <span class="date">December 2023</span>
+                    </div>
+                    <div class="experience-body">
+                        <ul>
+                            <li>Won 1st place with RAG-powered chatbot for student support</li>
+                            <li>Implemented automatic responses to emails powered by AI</li>
+                            <li>Preprocessing of documents for ingestion into vector database</li>
+                        </ul>
+                        <div class="skills-container">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">NextJS</span>
+                            <span class="skill-tag">LangChain</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Thomas Wölkhart. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="js/animation.js"></script>
+</body>
+</html>

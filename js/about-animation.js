@@ -12,11 +12,15 @@ export function initAboutAnimation() {
 
     renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 
-    const geometry = new THREE.IcosahedronGeometry(1, 0);
+    const geometry = new THREE.IcosahedronGeometry(1.6, 0);
     const material = new THREE.MeshPhongMaterial({
         color: '#3498db',
         wireframe: true,
-        wireframeLinewidth: 2
+        wireframeLinewidth: 2,
+        emissive: '#3498db',
+        emissiveIntensity: 0.8,
+        transparent: true,
+        opacity: 0.7
     });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);

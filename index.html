@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thomas Wölkhart</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
     <script src="js/scroll-animation.js"></script>
     <script type="importmap">
@@ -18,6 +19,9 @@
 </head>
 <body>
     <header>
+        <div class="nav-left">
+            <span class="nav-name">Thomas Wölkhart</span>
+        </div>
         <nav>
             <ul>
                 <li><a href="#hero">Home</a></li>
@@ -28,6 +32,14 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="nav-social">
+            <a href="https://github.com/lankabelgezogen" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/thomas-woelkhart" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
     </header>
 
     <main>
@@ -35,7 +47,7 @@
             <canvas id="animation"></canvas>
             <div class="hero-content">
                 <h1>Thomas Wölkhart</h1>
-                <p>Grad Student / Data Scientist / ML Engineer</p>
+                <p>Grad Student / Data Scientist / AI Engineer</p>
             </div>
         </section>
 
@@ -71,7 +83,7 @@
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-target="4">0</span>
-                            <span class="stat-label">Live Projects in the Industry</span>
+                            <span class="stat-label">Live Projects in companies</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-target="10">0</span>
@@ -138,7 +150,7 @@
                     <div class="experience-body">
                         <ul>
                             <li>Continuation of winning project at Microsoft LLM Hackathon 2023</li>
-                            <li>Developed backend for first version of <a href="https://www.mgt.tum.de/our-stories-with-impact/stories/academic-flagship-project-for-ai-in-bavaria-goes-live">pAIge Chatbot</a></li>
+                            <li>Developed backend for first version of <a href="https://www.mgt.tum.de/our-stories-with-impact/stories/academic-flagship-project-for-ai-in-bavaria-goes-live" target="_blank">pAIge Chatbot</a></li>
                             <li>Reduced consulting workload and freed up capacity in student support team</li>
                             <li>Worked on RAG-System, databases, and feedback implementation</li>
                         </ul>
@@ -247,12 +259,12 @@
                 </div>
                 <div class="experience-card">
                     <div class="experience-header">
-                        <h3>Alexandria ML-Agents Hackathon</h3>
+                        <h3>ML-Agents Hackathon</h3>
                         <span class="date">May 2024</span>
                     </div>
                     <div class="experience-body">
                         <ul>
-                            <li>Won 1st place</li>
+                            <li>Won 1st place in hackathon hosted by Alexandria in Munich</li>
                             <li>Solution to share memory across LLM apps seamlessly</li>
                             <li>Worked on backend, frontend, and database</li>
                         </ul>
@@ -286,6 +298,25 @@
 
         <section id="contact">
             <h2>Contact</h2>
+            <div class="contact-container">
+                <div class="contact-content">
+                    <p>I'm always interested in hearing about new opportunities and collaborations.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:info@thomaswoelkhart.com" class="contact-method" target="_blank">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://linkedin.com/in/thomas-woelkhart" class="contact-method" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/lankabelgezogen" class="contact-method" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 

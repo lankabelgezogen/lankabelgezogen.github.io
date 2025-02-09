@@ -87,23 +87,3 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(document.querySelector('.stats-container'));
-
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.createElement('div');
-    hamburger.classList.add('hamburger');
-    hamburger.innerHTML = '☰';
-    
-    const header = document.querySelector('header');
-    header.appendChild(hamburger);
-
-    hamburger.addEventListener('click', () => {
-        header.classList.toggle('nav-menu-active');
-    });
-
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            header.classList.remove('nav-menu-active');
-        });
-    });
-});

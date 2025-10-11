@@ -664,6 +664,96 @@ footer {
     }
 }
 
+@media (max-width: 600px) {
+
+    .about-visual,
+    #about-animation {
+        display: none !important;
+    }
+
+    #about {
+        min-height: auto;
+    }
+
+    .about-container {
+        gap: 1.25rem;
+        padding: 1rem;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: .5rem .75rem;
+    }
+
+    .nav-social {
+        display: none;
+    }
+
+    .nav-name {
+        display: none;
+    }
+
+
+    nav {
+        padding: 0 .25rem;
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
+        gap: .75rem;
+        padding: 0;
+        white-space: nowrap;
+    }
+
+    nav a {
+        padding: .35rem 0;
+        font-size: .9rem;
+        letter-spacing: 0;
+    }
+
+    nav a::after {
+        height: 1px;
+    }
+
+    .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .5rem;
+        margin-top: 1rem;
+    }
+
+    .contact-method {
+        padding: .6rem;
+        border-radius: 12px;
+        background: rgba(0, 0, 0, .25);
+        box-shadow: none;
+        transform: none !important;
+    }
+
+    .contact-method:hover {
+        transform: none;
+        box-shadow: none;
+        border-color: rgba(74, 158, 255, .25);
+    }
+
+    .contact-method i {
+        font-size: 1.4rem;
+        margin-bottom: .35rem;
+    }
+
+    .contact-method span {
+        font-size: .85rem;
+        line-height: 1.1;
+    }
+
+    .contact-content {
+        padding: 1.25rem;
+    }
+}
+
 @media (max-width:480px) {
     .hero-content h1 {
         font-size: 2rem;
@@ -690,4 +780,34 @@ footer {
     .about-visual {
         display: none;
     }
+}
+
+@media (max-width: 420px) {
+    header {
+        padding: .45rem .5rem;
+    }
+
+    nav {
+        padding: 0 .2rem;
+    }
+
+    nav ul {
+        gap: .5rem;
+    }
+
+    nav a {
+        font-size: .8rem;
+    }
+
+}
+
+@media (max-width: 360px) {
+    nav ul {
+        gap: .4rem;
+    }
+
+    nav a {
+        font-size: .75rem;
+    }
+
 }

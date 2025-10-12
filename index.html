@@ -18,11 +18,12 @@
     </script>
 </head>
 <body>
-    <header>
+    <header id="site-header">
         <div class="nav-left">
             <span class="nav-name">Thomas Wölkhart</span>
         </div>
-        <nav>
+    
+        <nav id="primary-nav">
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -32,15 +33,17 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+    
         <div class="nav-social">
-            <a href="https://github.com/lankabelgezogen" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/thomas-woelkhart" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
+            <a href="https://github.com/lankabelgezogen" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/thomas-woelkhart" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <button id="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
+                <span class="icon-sun" aria-hidden="true">☀️</span>
+                <span class="icon-moon" aria-hidden="true">🌙</span>
+            </button>
         </div>
     </header>
+
 
     <main>
         <section id="hero">
@@ -427,6 +430,46 @@
     <footer>
         <p>&copy; 2025 Thomas Wölkhart. All rights reserved.</p>
     </footer>
+    <script>
+        (function () {
+            const STORAGE_KEY = 'theme';
+            const root = document.documentElement;
+            const btn = document.getElementById('theme-toggle');
+
+            const saved = localStorage.getItem(STORAGE_KEY);
+            const systemPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+            const initial = saved || (systemPrefersLight ? 'light' : 'dark');
+            root.setAttribute('data-theme', initial);
+
+            function reflect() {
+                const isLight = root.getAttribute('data-theme') === 'light';
+                if (btn) btn.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+            }
+            reflect();
+
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+                    root.setAttribute('data-theme', next);
+                    localStorage.setItem(STORAGE_KEY, next);
+                    reflect();
+                });
+            }
+
+            if (!saved && window.matchMedia) {
+                const mq = window.matchMedia('(prefers-color-scheme: light)');
+                mq.addEventListener?.('change', e => {
+                    root.setAttribute('data-theme', e.matches ? 'light' : 'dark');
+                    reflect();
+                });
+            }
+
+            const meta = document.createElement('meta');
+            meta.name = 'color-scheme';
+            meta.content = 'dark light';
+            document.head.appendChild(meta);
+        })();
+    </script>
 
     <script type="module" src="js/animation.js"></script>
 </body>
